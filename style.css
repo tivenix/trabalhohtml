@@ -1,63 +1,63 @@
+/* Define a fonte geral da página */
 body {
   font-family: Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
+  background-color: #f4f4f4;
+  color: #333;
 }
-header {
+
+/* Estiliza o menu de navegação */
+header nav {
   background-color: #333;
   padding: 10px 0;
 }
-nav ul {
+
+.menu {
+  list-style: none;
   display: flex;
   justify-content: center;
-  list-style: none;
+  gap: 30px;
   margin: 0;
   padding: 0;
 }
-p {
-  margin-bottom: 20px; /* Espaçamento entre parágrafos */
-}
-nav ul li {
-  margin: 0 15px;
-}
-nav ul li a {
+
+.menu li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
-nav ul li a:hover {
+
+.menu li a:hover {
   text-decoration: underline;
 }
-main {
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
-  background-color: white;
-}
-footer {
+
+/* Centraliza e estiliza a seção principal */
+.conteudo {
   text-align: center;
-  padding: 15px;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.conteudo h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.conteudo p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Estiliza o rodapé */
+footer {
   background-color: #333;
   color: white;
-  margin-top: 20px;
-}
-form {
-  display: flex;
-  flex-direction: column;
-}
-input, textarea {
-  margin-bottom: 10px;
-  padding: 10px;
-  font-size: 1em;
-}
-button {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-}
-button:hover {
-  background-color: #555;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
