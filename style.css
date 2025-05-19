@@ -1,4 +1,3 @@
-/* Define a fonte geral da página */
 body {
   font-family: Helvetica, Arial, sans-serif;
   margin: 0;
@@ -7,7 +6,6 @@ body {
   color: #333;
 }
 
-/* Estiliza o menu de navegação */
 header nav {
   background-color: #333;
   padding: 10px 0;
@@ -32,15 +30,14 @@ header nav {
   text-decoration: underline;
 }
 
-/* Centraliza e estiliza a seção principal */
-.conteudo {
-  text-align: center;
+main {
   max-width: 800px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
 .conteudo h1 {
+  text-align: center; /* Centraliza todos os títulos */
   font-size: 2em;
   margin-bottom: 20px;
 }
@@ -51,13 +48,60 @@ header nav {
   margin-bottom: 20px;
 }
 
-/* Estiliza o rodapé */
+.conteudo ul {
+  list-style-type: disc;
+  padding-left: 40px; /* Dá espaço para o bullet point */
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.conteudo ul li {
+  margin-bottom: 8px; /* Espaço entre os itens da lista */
+  line-height: 1.4;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+form textarea {
+  min-height: 100px;
+}
+
+form button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
 footer {
   background-color: #333;
   color: white;
   text-align: center;
   padding: 15px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  margin-top: 40px;
 }
