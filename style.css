@@ -34,32 +34,31 @@ header nav {
   max-width: 800px;
   margin: 40px auto;
   padding: 0 20px;
-  text-align: center; /* Títulos e parágrafos centralizados */
+  text-align: center;
 }
 
 .conteudo h1 {
   font-size: 2em;
   margin-bottom: 20px;
-  text-align: center; /* Garante título centralizado */
+  text-align: center;
 }
 
-/* Parágrafos centralizados */
 .conteudo p {
   font-size: 1.1em;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-/* Listas com bullet points alinhados à esquerda dentro do conteúdo */
+/* Lista sem quebra de linha nos itens */
 .conteudo ul {
-  text-align: left;
   padding-left: 20px;
+  max-width: 800px;
   margin: 0 auto 20px auto;
-  max-width: 600px;
 }
 
 .conteudo ul li {
-  margin-bottom: 10px; /* Espaço entre os itens, sem quebra forçada */
+  white-space: nowrap; /* Sem quebra dentro do item */
+  margin-bottom: 10px;
 }
 
 footer {
