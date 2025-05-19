@@ -64,7 +64,7 @@ header nav {
   text-align: center;
 }
 
-/* Lista - bullets alinhados à esquerda, texto sem quebra */
+/* Lista - bullets alinhados à esquerda, texto sem quebra cortada */
 .conteudo ul {
   list-style: disc inside;
   padding-left: 0;
@@ -74,14 +74,14 @@ header nav {
 }
 
 .conteudo ul li {
-  white-space: nowrap;       /* impede quebra de linha interna */
-  overflow: hidden;          /* esconde texto excedente */
-  text-overflow: ellipsis;   /* adiciona "..." quando texto é cortado */
   margin-bottom: 10px;
   font-size: 1.05em;
+  white-space: normal;  /* permite quebra natural, sem cortar texto */
+  overflow: visible;    /* texto aparece todo */
+  text-overflow: clip;  /* sem reticências */
 }
 
-/* Formulário em contato */
+/* Formulário */
 form label {
   display: block;
   margin: 12px 0 6px 0;
@@ -102,6 +102,12 @@ form textarea {
   border-radius: 4px;
   resize: vertical;
   font-size: 1em;
+  display: block;
+  margin: 0 auto 15px auto; /* espaçamento entre campos */
+}
+
+form textarea {
+  height: 120px;
 }
 
 form button {
@@ -116,6 +122,8 @@ form button {
   transition: background-color 0.3s ease;
   max-width: 600px;
   width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 form button:hover,
