@@ -1,11 +1,19 @@
-body {
-  font-family: Helvetica, Arial, sans-serif;
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  box-sizing: border-box;
 }
 
+/* Fonte e cores base */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Menu de navegação */
 header nav {
   background-color: #333;
   padding: 10px 0;
@@ -16,51 +24,107 @@ header nav {
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin: 0;
-  padding: 0;
 }
 
 .menu li a {
   color: white;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
 }
 
-.menu li a:hover {
+.menu li a:hover,
+.menu li a:focus {
+  background-color: #555;
   text-decoration: underline;
+  outline: none;
 }
 
+/* Conteúdo principal */
 .conteudo {
   max-width: 800px;
   margin: 40px auto;
   padding: 0 20px;
-  text-align: center;
+  text-align: center; /* centraliza títulos e parágrafos */
 }
 
+/* Títulos centralizados */
 .conteudo h1 {
   font-size: 2em;
   margin-bottom: 20px;
+}
+
+/* Parágrafos */
+.conteudo p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.conteudo p {
-  font-size: 1.1em;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-/* Lista sem quebra de linha nos itens */
+/* Lista - bullets alinhados à esquerda, texto sem quebra */
 .conteudo ul {
-  padding-left: 20px;
-  max-width: 800px;
-  margin: 0 auto 20px auto;
+  list-style: disc inside;
+  padding-left: 0;
+  text-align: left;
+  max-width: 600px; /* limitar largura para melhor leitura */
+  margin: 0 auto 30px auto;
 }
 
 .conteudo ul li {
-  white-space: nowrap; /* Sem quebra dentro do item */
+  white-space: nowrap;       /* impede quebra de linha interna */
+  overflow: hidden;          /* esconde texto excedente */
+  text-overflow: ellipsis;   /* adiciona "..." quando texto é cortado */
   margin-bottom: 10px;
+  font-size: 1.05em;
 }
 
+/* Formulário em contato */
+form label {
+  display: block;
+  margin: 12px 0 6px 0;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 1em;
+}
+
+form button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  max-width: 600px;
+  width: 100%;
+}
+
+form button:hover,
+form button:focus {
+  background-color: #555;
+  outline: none;
+}
+
+/* Rodapé */
 footer {
   background-color: #333;
   color: white;
@@ -69,4 +133,18 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+  font-size: 0.9em;
+}
+
+/* Responsividade simples */
+@media (max-width: 650px) {
+  .conteudo ul {
+    max-width: 100%;
+  }
+  form input[type="text"],
+  form input[type="email"],
+  form textarea,
+  form button {
+    max-width: 100%;
+  }
 }
