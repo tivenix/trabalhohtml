@@ -30,11 +30,11 @@ header nav {
   text-decoration: underline;
 }
 
-.conteudo {
-  text-align: center;
+main {
   max-width: 800px;
   margin: 40px auto;
   padding: 0 20px;
+  text-align: center;
 }
 
 .conteudo h1 {
@@ -48,22 +48,21 @@ header nav {
   margin-bottom: 20px;
 }
 
-/* Lista em linha, itens sem quebra */
+/* Estilo para listas com quebra de linha e espaçamento */
 .conteudo ul {
-  list-style: disc inside;
-  padding-left: 0;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
+  padding-left: 20px;  /* Espaço para bullets */
   margin-bottom: 20px;
+  text-align: left;    /* Lista alinhada à esquerda */
+  display: block;      /* padrão para listas */
 }
 
-.conteudo li {
-  white-space: nowrap;
-  font-size: 1.1em;
-  margin-bottom: 0;
+.conteudo ul li {
+  margin-bottom: 10px; /* Espaço entre itens */
+  white-space: normal; /* Permite quebra de linha dentro do texto */
+  list-style-type: disc; /* Bolinha padrão */
 }
 
+/* Rodapé */
 footer {
   background-color: #333;
   color: white;
